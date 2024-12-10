@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose the Correct Option</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .wrong {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose the correct option!</h1>
+    <img src="{{ url_for('static', filename='image.jpg') }}" alt="Image">
+    <br>
+    <a href="{{ url_for('correct') }}" class="button">Correct Option</a>
+    <a href="{{ url_for('wrong') }}" class="button wrong">Wrong Option</a>
+</body>
+</html>
